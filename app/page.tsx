@@ -27,7 +27,7 @@ export default function Home() {
                 className="rounded-full"
               />
               <h3 className=" text-nowrap">Bryce Caton</h3>
-              <Progress value={33} className="text-blue-400 h-2" color="blue" />
+              <Progress value={70} className=" h-2" color="#57CA6A" />
               <p className=" text-nowrap">70%</p>
             </div>
             <div className="flex items-center mb-4 justify-start gap-3">
@@ -39,8 +39,8 @@ export default function Home() {
                 className="rounded-full"
               />
               <h3 className=" text-nowrap">Clair Stark</h3>
-              <Progress value={73} className="text-blue-400 h-2" color="blue" />
-              <p className=" text-nowrap">40%</p>
+              <Progress value={75} className="  h-2" color="#F2AA3E" />
+              <p className=" text-nowrap">75%</p>
             </div>
             <div className="flex items-center mb-4   justify-start gap-3">
               <Image
@@ -51,8 +51,12 @@ export default function Home() {
                 className="rounded-full"
               />
               <h3 className=" text-nowrap">James Ford</h3>
-              <Progress value={93} className="text-blue-400 h-2" color="blue" />
-              <p className=" text-nowrap">90%</p>
+              <Progress
+                value={50}
+                className="text-blue-400 h-2"
+                color="#F6DC51"
+              />
+              <p className=" text-nowrap">50%</p>
             </div>
           </div>
           <div className=" bg-white h-full w-full xl:w-3/4 p-5">

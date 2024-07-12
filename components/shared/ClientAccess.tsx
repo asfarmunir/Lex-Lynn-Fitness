@@ -31,7 +31,7 @@ const AddClient = () => {
         <LiaLockSolid className="text-xl mb-0.5 text-primary-50" />
         Access
       </AlertDialogTrigger>
-      <AlertDialogContent className=" p-0">
+      <AlertDialogContent className=" p-0 xl:min-w-[700px]">
         <AlertDialogHeader>
           <div className=" bg-primary flex items-center justify-between p-5">
             <p className=" text-lg">Bruce Wayn Login Info</p>
