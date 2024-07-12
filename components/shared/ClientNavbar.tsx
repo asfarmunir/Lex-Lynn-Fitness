@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { usePathname } from "next/navigation";
 
@@ -15,6 +16,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import ClientAccess from "./ClientAccess";
 
 const clientTabs = [
   {
@@ -23,7 +25,7 @@ const clientTabs = [
   },
   {
     title: "Check-Ins",
-    link: "/check-ins",
+    link: "/check-in",
   },
   {
     title: "Programs",
@@ -71,10 +73,7 @@ const ClientNavbar = ({ id }: { id: string }) => {
             <PiChatTeardropTextLight className="text-xl  text-primary-50   " />
             Chat
           </Link>
-          <Link href={"/"} className=" inline-flex items-center gap-1">
-            <LiaLockSolid className="text-xl mb-0.5 text-primary-50" />
-            Access
-          </Link>
+          <ClientAccess />
         </div>
         <div className=" hidden xl:flex items-center justify-evenly px-1 gap-4 2xl:px-4 flex-grow">
           {clientTabs.map((tab, index) => (
@@ -115,7 +114,7 @@ const ClientNavbar = ({ id }: { id: string }) => {
                   </Link>
                 ))}
               </div>
-              <div className=" flex items-center flex-col gap-5 text-xl  pt-12  md:py-3">
+              <div className="  flex md:hidden items-center flex-col gap-5 text-xl  pt-12  md:py-3">
                 <Link
                   href={"/"}
                   className=" inline-flex text-xl items-center gap-1"

@@ -221,19 +221,47 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
           </div>
         </div>
         <div
-          className=" w-full h-[570px]   lg:w-[35%] p-4 bg-white"
+          className=" w-full h-[570px]   lg:w-[35%] p-4 px-6 bg-white"
           style={{
             height: "",
           }}
         >
-          <h1 className=" text-xl font-semibold ">Unread Messages</h1>
-          <div className=" h-full flex items-center justify-center">
+          <div className="inline-flex mb-8  items-center gap-2">
             <Image
-              src="/images/messages.svg"
-              alt="Empty"
-              width={200}
-              height={200}
+              src="/icons/history.svg"
+              alt="Check-In"
+              width={25}
+              height={25}
             />
+            <h1 className=" text-xl  ">Unread Messages</h1>
+          </div>
+          <div className="flex items-start mb-6  justify-start gap-3">
+            <Image
+              src="/icons/clip.svg"
+              alt="Check-In"
+              width={30}
+              height={30}
+            />
+            <div className="flex flex-col">
+              <h2 className=" font-sans font-semibold">
+                MyFitnessPal connected.
+              </h2>
+              <p className=" text-sm text-slate-400">May 7, 2024 11:43 PM</p>
+            </div>
+          </div>
+          <div className="flex items-start mb-6  justify-start gap-3">
+            <Image
+              src="/icons/clip.svg"
+              alt="Check-In"
+              width={30}
+              height={30}
+            />
+            <div className="flex flex-col">
+              <h2 className=" font-sans font-semibold">
+                Apple Health connected.
+              </h2>
+              <p className=" text-sm text-slate-400">May 7, 2024 11:43 PM</p>
+            </div>
           </div>
         </div>
       </section>

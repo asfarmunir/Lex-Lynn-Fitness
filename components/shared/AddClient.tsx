@@ -62,7 +62,7 @@ const AddClient = () => {
     defaultValues: {
       email: "",
       firstName: "",
-      lastNumber: "",
+      lastName: "",
       assignTo: "",
     },
   });
