@@ -6,7 +6,9 @@ import { FaCheck } from "react-icons/fa6";
 import { IoMdAdd } from "react-icons/io";
 import { Slider } from "@/components/ui/slider";
 import { MdCompareArrows } from "react-icons/md";
+import AddCheckinForm from "@/components/shared/AddCheckinForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 
 const page = ({ params: { id } }: { params: { id: string } }) => {
   return (
@@ -26,10 +28,7 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
                 Reviewd
               </p>
             </div>
-            <button className=" bg-primary-50 px-2 md:px-4 py-2 text-sm md:text-base inline-flex items-center text-white ">
-              <IoMdAdd className=" text-sm md:text-lg mr-2" />
-              Add Check-in Form
-            </button>
+            <AddCheckinForm />
           </div>
           <div className="flex flex-col items-center gap-6 my-12">
             <div className=" w-full ">
@@ -132,10 +131,13 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
             height: "",
           }}
         >
-          <button className=" w-full py-3 text-white inline-flex items-center justify-center font-semibold gap-2 text-center hover:bg-primary-50/90 bg-primary-50">
+          <Link
+            href={`/client/${id}/check-in/compare`}
+            className=" w-full py-3 text-white inline-flex items-center justify-center font-semibold gap-2 text-center hover:bg-primary-50/90 bg-primary-50"
+          >
             <MdCompareArrows className="text-2xl  -rotate-45" />
             Compare Check-Ins
-          </button>
+          </Link>
           <div className=" w-full mt-8 bg-white pb-8 ">
             <Tabs defaultValue="account" className=" w-full ">
               <TabsList className=" w-full gap-8">
