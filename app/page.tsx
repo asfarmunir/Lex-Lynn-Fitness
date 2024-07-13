@@ -105,7 +105,7 @@ export default function Home() {
                 paddingAngle={0}
                 radius={50}
                 startAngle={280}
-                background="slategray"
+                background="#F1EEE9"
                 viewBoxSize={[100, 100]}
               />
               <div className=" flex flex-col items-center justify-center gap-3">
