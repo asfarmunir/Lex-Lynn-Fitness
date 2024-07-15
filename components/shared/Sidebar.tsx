@@ -100,7 +100,7 @@ const Sidebar = () => {
           <Link
             href={"/checkInForms"}
             className={`inline-flex text-sm 2xl:text-lg mb-2
-        ${pathname === "/form" ? "text-black" : "text-slate-300"}
+        ${pathname === "/checkInForms" ? "text-black" : "text-slate-300"}
         
         items-center gap-3`}
           >
@@ -110,7 +110,7 @@ const Sidebar = () => {
               width={16}
               height={16}
               className={`${
-                pathname === "/form" ? "opacity-100" : "opacity-30"
+                pathname === "/checkInForms" ? "opacity-100" : "opacity-30"
               }`}
               priority
             />
@@ -136,9 +136,9 @@ const Sidebar = () => {
             Programs
           </Link>
           <Link
-            href={"/"}
+            href={"/exercises"}
             className={`inline-flex text-sm 2xl:text-lg mb-2
-        ${pathname === "/exercise" ? "text-black" : "text-slate-300"}
+        ${pathname === "/exercises" ? "text-black" : "text-slate-300"}
         
         items-center gap-3`}
           >
@@ -147,7 +147,7 @@ const Sidebar = () => {
               alt="Lex Lynne Fitness"
               width={16}
               className={`${
-                pathname === "/exercise" ? "opacity-100" : "opacity-30"
+                pathname === "/exercises" ? "opacity-100" : "opacity-30"
               }`}
               height={16}
               priority
@@ -303,7 +303,7 @@ const Sidebar = () => {
                 Programs
               </Link>
               <Link
-                href={"/"}
+                href={"/exercises"}
                 className={`inline-flex text-sm 2xl:text-lg mb-2
         ${pathname === "/exercise" ? "text-black" : "text-slate-300"}
         
