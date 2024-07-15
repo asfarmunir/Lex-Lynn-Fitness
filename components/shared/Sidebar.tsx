@@ -98,7 +98,7 @@ const Sidebar = () => {
             Templates
           </h2>
           <Link
-            href={"/"}
+            href={"/checkInForms"}
             className={`inline-flex text-sm 2xl:text-lg mb-2
         ${pathname === "/form" ? "text-black" : "text-slate-300"}
         
@@ -265,7 +265,7 @@ const Sidebar = () => {
                 Templates
               </h2>
               <Link
-                href={"/"}
+                href={"/checkInForms"}
                 className={`inline-flex text-sm 2xl:text-lg mb-2
         ${pathname === "/form" ? "text-black" : "text-slate-300"}
         
