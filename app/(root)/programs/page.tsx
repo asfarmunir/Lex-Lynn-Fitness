@@ -43,8 +43,9 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import ImportPersonalWorkout from "@/components/shared/ImportPersonalWorkout";
 import { FaChevronDown } from "react-icons/fa";
-
+import WorkoutBuilder from "@/components/shared/WorkoutBuilder";
 const Page = () => {
   const [tab, setTab] = useState("");
 
@@ -230,30 +231,31 @@ const Page = () => {
                       </DropdownMenuSubTrigger>
                       <DropdownMenuPortal>
                         <DropdownMenuSubContent className="flex flex-col">
-                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-3 text-lg w-56">
                             <Image
                               src="/icons/programPink.svg"
                               alt="arrow"
-                              width={25}
-                              height={25}
+                              width={23}
+                              height={23}
                             />
                             Shared Programs
                           </DropdownMenuItem>
-                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                          {/* <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-3 text-lg w-56">
                             <Image
                               src="/icons/programPink.svg"
                               alt="arrow"
-                              width={25}
-                              height={25}
+                              width={23}
+                              height={23}
                             />
                             Personal Programs
-                          </DropdownMenuItem>
-                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                          </DropdownMenuItem> */}
+                          <ImportPersonalWorkout />
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-3 text-lg w-56">
                             <Image
                               src="/icons/programPink.svg"
                               alt="arrow"
-                              width={25}
-                              height={25}
+                              width={23}
+                              height={23}
                             />
                             Another Trainer
                           </DropdownMenuItem>
@@ -360,13 +362,32 @@ const Page = () => {
                   </div>
                 </div>
                 <div className=" hidden sm:flex items-center gap-6">
-                  <Image
-                    src="/icons/edit.svg"
-                    alt="arrow"
-                    width={20}
-                    height={20}
-                    className=" cursor-pointer"
-                  />
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Image
+                        src="/icons/edit.svg"
+                        alt="arrow"
+                        width={20}
+                        height={20}
+                        className=" cursor-pointer hidden lg:block"
+                      />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className=" mr-12 mt-1 p-5 py-6 gap-3 bg-white rounded-none shadow w-48 flex items-center justify-between">
+                      {/* <button className="flex items-center gap-2.5">
+                        <Image
+                          src="/icons/builder.svg"
+                          alt="arrow"
+                          width={20}
+                          height={20}
+                          className=" cursor-pointer"
+                        />
+                        <h2 className="font-sans font-semibold">
+                          Workout Builder
+                        </h2>
+                      </button> */}
+                      <WorkoutBuilder />
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                   <Image
                     src="/icons/timing.svg"
                     alt="arrow"
