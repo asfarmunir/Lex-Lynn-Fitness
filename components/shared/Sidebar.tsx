@@ -117,9 +117,9 @@ const Sidebar = () => {
             Check-In Forms
           </Link>
           <Link
-            href={"/"}
+            href={"/programs"}
             className={`inline-flex text-sm 2xl:text-lg mb-2
-        ${pathname === "/program" ? "text-black" : "text-slate-300"}
+        ${pathname === "/programs" ? "text-black" : "text-slate-300"}
         
         items-center gap-3`}
           >
@@ -129,7 +129,7 @@ const Sidebar = () => {
               width={16}
               height={16}
               className={`${
-                pathname === "/program" ? "opacity-100" : "opacity-30"
+                pathname === "/programs" ? "opacity-100" : "opacity-30"
               }`}
               priority
             />
@@ -284,9 +284,9 @@ const Sidebar = () => {
                 Check-In Forms
               </Link>
               <Link
-                href={"/"}
+                href={"/programs"}
                 className={`inline-flex text-sm 2xl:text-lg mb-2
-        ${pathname === "/program" ? "text-black" : "text-slate-300"}
+        ${pathname === "/programs" ? "text-black" : "text-slate-300"}
         
         items-center gap-3`}
               >
@@ -296,7 +296,7 @@ const Sidebar = () => {
                   width={16}
                   height={16}
                   className={`${
-                    pathname === "/program" ? "opacity-100" : "opacity-30"
+                    pathname === "/programs" ? "opacity-100" : "opacity-30"
                   }`}
                   priority
                 />
