@@ -6,7 +6,7 @@ import { FaCheck } from "react-icons/fa6";
 import { IoMdAdd } from "react-icons/io";
 import { Slider } from "@/components/ui/slider";
 import { MdCompareArrows } from "react-icons/md";
-import AddCheckinForm from "@/components/shared/AddCheckinForm";
+import AddCheckinForm from "@/components/shared/AddClientCheckinForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 

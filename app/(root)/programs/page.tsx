@@ -21,6 +21,29 @@ import { IoSearch } from "react-icons/io5";
 import { MdOutlineFilterList } from "react-icons/md";
 import ProgramSubscribers from "@/components/shared/ProgramSubscribers";
 import AddAiWorkout from "@/components/shared/AddAiWorkout";
+import AddTrainingPhase from "@/components/shared/AddTrainingPhase";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { FaChevronDown } from "react-icons/fa";
 
 const Page = () => {
   const [tab, setTab] = useState("");
@@ -35,10 +58,7 @@ const Page = () => {
                 <h1 className="text-lg 2xl:text-3xl ">Programs</h1>
               </div>
             </div>
-            <button className=" bg-primary-50 px-2 font-sans font-semibold md:px-4 py-2 text-sm md:text-base inline-flex items-center text-white ">
-              <IoMdAdd className=" text-sm md:text-lg mr-2" />
-              Add New
-            </button>{" "}
+            <AddTrainingPhase />
           </div>
           <div className="flex w-full  items-center bg-gray-100  px-3 mb-10">
             <IoSearch className="text-2xl mx-1 mr-2 text-slate-400/70" />
@@ -187,7 +207,7 @@ const Page = () => {
                 <MdOutlineFilterList className=" text-4xl hidden lg:block   rounded-full hover:cursor-pointer" />
               </div>
             </div>
-            <div className="flex items-center gap-4 px-4 py-2 bg-primary/65 mb-6">
+            <div className="flex items-center gap-8 px-4 py-2 bg-primary/65 mb-6">
               <div className=" inline-flex items-center">
                 <Image
                   src="/icons/import.svg"
@@ -195,16 +215,115 @@ const Page = () => {
                   width={20}
                   height={20}
                 />
-                <Select>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="font-sans inline-flex items-center ml-2 text-lg gap-1">
+                    Import
+                    <FaChevronDown className="ml-1 text-xs text-slate-400 mt-0.5" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent
+                    className=" mr-12 mt-1 px-2 py-6 gap-3 bg-white rounded-none shadow w-56 flex
+                   items-center flex-col justify-between"
+                  >
+                    <DropdownMenuSub>
+                      <DropdownMenuSubTrigger className=" bg-transparent font-semibold w-full font-sans text-lg">
+                        Master Workouts
+                      </DropdownMenuSubTrigger>
+                      <DropdownMenuPortal>
+                        <DropdownMenuSubContent className="flex flex-col">
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                            <Image
+                              src="/icons/programPink.svg"
+                              alt="arrow"
+                              width={25}
+                              height={25}
+                            />
+                            Shared Programs
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                            <Image
+                              src="/icons/programPink.svg"
+                              alt="arrow"
+                              width={25}
+                              height={25}
+                            />
+                            Personal Programs
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                            <Image
+                              src="/icons/programPink.svg"
+                              alt="arrow"
+                              width={25}
+                              height={25}
+                            />
+                            Another Trainer
+                          </DropdownMenuItem>
+                        </DropdownMenuSubContent>
+                      </DropdownMenuPortal>
+                    </DropdownMenuSub>
+                    <DropdownMenuSub>
+                      <DropdownMenuSubTrigger className=" bg-transparent font-semibold w-full font-sans text-lg">
+                        Master Programs
+                      </DropdownMenuSubTrigger>
+                      <DropdownMenuPortal>
+                        <DropdownMenuSubContent className="flex flex-col">
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                            <Image
+                              src="/icons/programPink.svg"
+                              alt="arrow"
+                              width={25}
+                              height={25}
+                            />
+                            Shared Programs
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                            <Image
+                              src="/icons/programPink.svg"
+                              alt="arrow"
+                              width={25}
+                              height={25}
+                            />
+                            Personal Programs
+                          </DropdownMenuItem>
+                          <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-2 text-lg w-56">
+                            <Image
+                              src="/icons/programPink.svg"
+                              alt="arrow"
+                              width={25}
+                              height={25}
+                            />
+                            Another Trainer
+                          </DropdownMenuItem>
+                        </DropdownMenuSubContent>
+                      </DropdownMenuPortal>
+                    </DropdownMenuSub>
+                    <DropdownMenuItem className=" w-full font-sans font-semibold text-lg">
+                      Clients Programs
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                {/* <Select>
                   <SelectTrigger className=" w-fit gap-2 border-none rounded-none text-base 2xl:text-lg font-sans bg-transparent">
                     <SelectValue placeholder="import" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="">
                     <SelectItem value="light">Age</SelectItem>
-                    <SelectItem value="dark">Weight</SelectItem>
-                    <SelectItem value="system">Metrics</SelectItem>
+                    <SelectItem value="ok">
+                      <NavigationMenu>
+                        <NavigationMenuList>
+                          <NavigationMenuItem>
+                            <NavigationMenuTrigger>
+                              Item One
+                            </NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                              <NavigationMenuLink>Link</NavigationMenuLink>
+                            </NavigationMenuContent>
+                          </NavigationMenuItem>
+                        </NavigationMenuList>
+                      </NavigationMenu>
+                    </SelectItem>
+                    <SelectItem value="system">Client Program</SelectItem>
                   </SelectContent>
-                </Select>
+                </Select> */}
               </div>
               <div className=" inline-flex items-center">
                 <Image
