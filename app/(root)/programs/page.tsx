@@ -46,6 +46,7 @@ import {
 import ImportPersonalWorkout from "@/components/shared/ImportPersonalWorkout";
 import { FaChevronDown } from "react-icons/fa";
 import WorkoutBuilder from "@/components/shared/WorkoutBuilder";
+import Link from "next/link";
 const Page = () => {
   const [tab, setTab] = useState("");
 
@@ -240,15 +241,7 @@ const Page = () => {
                             />
                             Shared Programs
                           </DropdownMenuItem>
-                          {/* <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-3 text-lg w-56">
-                            <Image
-                              src="/icons/programPink.svg"
-                              alt="arrow"
-                              width={23}
-                              height={23}
-                            />
-                            Personal Programs
-                          </DropdownMenuItem> */}
+
                           <ImportPersonalWorkout />
                           <DropdownMenuItem className=" font-sans  px-3  inline-flex items-center gap-3 text-lg w-56">
                             <Image
@@ -303,29 +296,6 @@ const Page = () => {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                {/* <Select>
-                  <SelectTrigger className=" w-fit gap-2 border-none rounded-none text-base 2xl:text-lg font-sans bg-transparent">
-                    <SelectValue placeholder="import" />
-                  </SelectTrigger>
-                  <SelectContent className="">
-                    <SelectItem value="light">Age</SelectItem>
-                    <SelectItem value="ok">
-                      <NavigationMenu>
-                        <NavigationMenuList>
-                          <NavigationMenuItem>
-                            <NavigationMenuTrigger>
-                              Item One
-                            </NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                              <NavigationMenuLink>Link</NavigationMenuLink>
-                            </NavigationMenuContent>
-                          </NavigationMenuItem>
-                        </NavigationMenuList>
-                      </NavigationMenu>
-                    </SelectItem>
-                    <SelectItem value="system">Client Program</SelectItem>
-                  </SelectContent>
-                </Select> */}
               </div>
               <div className=" inline-flex items-center">
                 <Image
@@ -348,7 +318,10 @@ const Page = () => {
             </div>
             <div className="w-full  flex flex-col gap-5 lg:px-5">
               <div className="flex items-center justify-between">
-                <div className="flex flex-col md:flex-row items-start gap-3">
+                <Link
+                  href={`/programs/details`}
+                  className="flex flex-col md:flex-row hover:bg-slate-50/80 items-start gap-3"
+                >
                   <div className="w-40 h-20 bg-slate-500/30 rounded-lg" />
                   <div className="flex flex-col">
                     <p className=" font-sans font-semibold">Legs</p>
@@ -360,7 +333,8 @@ const Page = () => {
                       typesetting...
                     </p>
                   </div>
-                </div>
+                </Link>
+
                 <div className=" hidden sm:flex items-center gap-6">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>

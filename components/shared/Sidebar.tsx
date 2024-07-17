@@ -74,7 +74,7 @@ const Sidebar = () => {
             Manage
           </h2>
           <Link
-            href={"/"}
+            href={"/teams"}
             className={`inline-flex text-sm 2xl:text-lg mb-2
         ${pathname === "/teams" ? "text-black" : "text-slate-300"}
         
@@ -241,7 +241,7 @@ const Sidebar = () => {
                 Manage
               </h2>
               <Link
-                href={"/"}
+                href={"/teams"}
                 className={`inline-flex text-sm 2xl:text-lg mb-2
         ${pathname === "/teams" ? "text-black" : "text-slate-300"}
         
