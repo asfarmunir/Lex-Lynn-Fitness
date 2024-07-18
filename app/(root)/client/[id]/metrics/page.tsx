@@ -22,11 +22,12 @@ import {
 } from "@/components/ui/select";
 import AddNewMetric from "@/components/shared/AddNewMetric";
 import AddMetricData from "@/components/shared/AddMetricData";
+import ClientMetricsGraph from "@/components/shared/ClientMetricsGraph";
 
 const Page = ({ params: { id } }: { params: { id: string } }) => {
   return (
     <main className=" flex max-h-screen overflow-y-auto overflow-x-hidden flex-col mb-12 pb-12 gap-4 w-full items-start  justify-start">
-      {/* <ClientNavbar id={id} /> */}
+      <ClientNavbar id={id} />
 
       <section className=" flex flex-col lg:flex-row gap-4 w-full items-start  justify-start">
         <div className=" w-full lg:w-[28%] p-5 lg:min-h-[770px]  bg-white  gap-4">
@@ -77,6 +78,9 @@ const Page = ({ params: { id } }: { params: { id: string } }) => {
               </p>
             </div>
             <AddMetricData />
+          </div>
+          <div className=" w-full flex items-center justify-center mb-12">
+            <ClientMetricsGraph />
           </div>
           <Table>
             <TableHeader>
