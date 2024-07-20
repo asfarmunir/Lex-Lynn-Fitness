@@ -34,7 +34,7 @@ const Page = ({ params: { id } }: { params: { id: string } }) => {
             href={`/client/${id}/nutritions`}
             className="font-sans cursor-pointer font-semibold"
           >
-            Nutrition Plans
+            Meal Plans
           </Link>
           <Link
             href={`/client/${id}/nutritions/logger`}
