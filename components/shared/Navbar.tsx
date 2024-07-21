@@ -22,7 +22,7 @@ const Navbar = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-96 mr-24 mt-1 p-6 py-4 rounded-none shadow-sm">
             <div className=" w-full items-center flex justify-between mb-2">
-              <h3 className=" text-lg">Notifications</h3>
+              <h3 className=" text-lg font-sans">Notifications</h3>
               <button className=" text-blue-400 font-thin text-sm">
                 Mark all as read
               </button>
@@ -38,7 +38,7 @@ const Navbar = () => {
               />
               <div className="flex flex-col ml-3">
                 <p className="">
-                  <strong className=" mr-1 font-serif">Bryce Caton</strong>
+                  <strong className=" mr-1 ">Bryce Caton</strong>
                   has completed chest workout and said “Great workout!”
                 </p>
                 <span className=" text-sm text-slate-400/60">3hrs ago</span>
@@ -55,7 +55,7 @@ const Navbar = () => {
               />
               <div className="flex flex-col ml-3">
                 <p className="">
-                  <strong className=" mr-1 font-serif">Bryce Caton</strong>
+                  <strong className=" mr-1 ">Bryce Caton</strong>
                   has completed chest workout and said “Great workout!”
                 </p>
                 <span className=" text-sm text-slate-400/60">3hrs ago</span>
@@ -72,7 +72,7 @@ const Navbar = () => {
               />
               <div className="flex flex-col ml-3">
                 <p className="">
-                  <strong className=" mr-1 font-serif">Bryce Caton</strong>
+                  <strong className=" mr-1 ">Bryce Caton</strong>
                   has completed chest workout and said “Great workout!”
                 </p>
                 <span className=" text-sm text-slate-400/60">3hrs ago</span>
@@ -89,7 +89,7 @@ const Navbar = () => {
               />
               <div className="flex flex-col ml-3">
                 <p className="">
-                  <strong className=" mr-1 font-serif">Bryce Caton</strong>
+                  <strong className=" mr-1 ">Bryce Caton</strong>
                   has completed chest workout and said “Great workout!”
                 </p>
                 <span className=" text-sm text-slate-400/60">3hrs ago</span>
