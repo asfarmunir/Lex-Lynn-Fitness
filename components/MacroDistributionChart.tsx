@@ -28,6 +28,7 @@ const Graph = () => {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
+          className=" font-sans"
           margin={{
             top: 5,
             right: 30,

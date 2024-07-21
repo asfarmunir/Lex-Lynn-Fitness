@@ -16,7 +16,7 @@ export default function Home() {
       <div className=" w-full lg:w-[65%] flex flex-col items-center justify-center gap-4">
         <div className=" w-full flex flex-col xl:flex-row items-start justify-center gap-4">
           <div className=" bg-white w-full p-5">
-            <h1 className="text-xl font-semibold mb-5">Recent Clients</h1>
+            <h1 className="text-xl  mb-5">Recent Clients</h1>
 
             <div className="flex items-center mb-4 justify-start gap-3">
               <Image
@@ -28,7 +28,9 @@ export default function Home() {
               />
               <h3 className=" text-nowrap">Bryce Caton</h3>
               <Progress value={70} className=" h-2" color="#57CA6A" />
-              <p className=" text-nowrap">70%</p>
+              <p className=" text-nowrap">
+                70<span className=" font-sans">%</span>
+              </p>
             </div>
             <div className="flex items-center mb-4 justify-start gap-3">
               <Image
@@ -40,7 +42,9 @@ export default function Home() {
               />
               <h3 className=" text-nowrap">Clair Stark</h3>
               <Progress value={75} className="  h-2" color="#F2AA3E" />
-              <p className=" text-nowrap">75%</p>
+              <p className=" text-nowrap">
+                75<span className=" font-sans">%</span>{" "}
+              </p>
             </div>
             <div className="flex items-center mb-4   justify-start gap-3">
               <Image
@@ -56,14 +60,16 @@ export default function Home() {
                 className="text-blue-400 h-2"
                 color="#F6DC51"
               />
-              <p className=" text-nowrap">50%</p>
+              <p className=" text-nowrap">
+                50<span className=" font-sans">%</span>
+              </p>
             </div>
           </div>
           <div className=" bg-white h-full w-full xl:w-3/4 p-5">
             <div className=" w-full flex items-center mb-6 justify-between">
-              <h1 className="text-xl font-semibold ">Check-Ins Progress</h1>
+              <h1 className="text-xl  ">Check-Ins Progress</h1>
               <Select>
-                <SelectTrigger className="w-[100px] bg-primary shadow-none font-semibold">
+                <SelectTrigger className="w-[100px] bg-primary shadow-none ">
                   <SelectValue placeholder="Week" />
                 </SelectTrigger>
                 <SelectContent>
@@ -73,7 +79,7 @@ export default function Home() {
                 </SelectContent>
               </Select>
             </div>{" "}
-            <div className="flex items-center justify-evenly gap-4">
+            <div className="flex items-center  font-sans justify-evenly gap-4">
               <PieChart
                 className=" w-36"
                 animate={true}
@@ -123,9 +129,9 @@ export default function Home() {
         </div>
         <div className=" w-full bg-white p-5">
           <div className=" w-full flex items-center mb-6 justify-between">
-            <h1 className="text-xl font-semibold ">Recent Check-Ins</h1>
+            <h1 className="text-xl  ">Recent Check-Ins</h1>
             <Select>
-              <SelectTrigger className="w-[100px] bg-primary font-semibold">
+              <SelectTrigger className="w-[100px] bg-primary ">
                 <SelectValue placeholder="Week" />
               </SelectTrigger>
               <SelectContent>
@@ -143,7 +149,7 @@ export default function Home() {
                 width={40}
                 height={40}
               />
-              <p className=" font-semibold"> Charlotte </p>
+              <p className=" "> Charlotte </p>
             </div>
             <p className="text-xs md:text-base">Weekly Check-In (Sample)</p>
             <p>2 days ago</p>
@@ -159,7 +165,7 @@ export default function Home() {
                 width={40}
                 height={40}
               />
-              <p className=" font-semibold"> Charlotte </p>
+              <p className=" "> Charlotte </p>
             </div>
             <p className="text-xs md:text-base">Weekly Check-In (Sample)</p>
             <p>2 days ago</p>
@@ -175,7 +181,7 @@ export default function Home() {
                 width={40}
                 height={40}
               />
-              <p className=" font-semibold"> Charlotte </p>
+              <p className=" "> Charlotte </p>
             </div>
             <p className="text-xs md:text-base">Weekly Check-In (Sample)</p>
             <p>2 days ago</p>
@@ -191,7 +197,7 @@ export default function Home() {
                 width={40}
                 height={40}
               />
-              <p className=" font-semibold"> Charlotte </p>
+              <p className=" "> Charlotte </p>
             </div>
             <p className="text-xs md:text-base">Weekly Check-In (Sample)</p>
             <p>2 days ago</p>
@@ -207,7 +213,7 @@ export default function Home() {
           height: "",
         }}
       >
-        <h1 className=" text-xl font-semibold ">Unread Messages</h1>
+        <h1 className=" text-xl  ">Unread Messages</h1>
         <div className=" h-full flex items-center justify-center">
           <Image
             src="/images/messages.svg"

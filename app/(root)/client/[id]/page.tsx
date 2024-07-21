@@ -39,7 +39,7 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
                 />
                 <h1 className="">Last Check-In</h1>
               </div>
-              <p className="bg-yellow-300/55 px-5 py-0.5 inline-flex font-semibold items-center gap-1">
+              <p className="bg-yellow-300/55 px-5 py-0.5 inline-flex  font-semibold font-sans items-center gap-1">
                 2 days ago
               </p>
             </div>
@@ -53,7 +53,7 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
                 />
                 <h1 className="">Duration</h1>
               </div>
-              <p className="bg-primary px-3 py-0.5 inline-flex font-semibold items-center gap-1">
+              <p className="bg-primary px-3 py-0.5 inline-flex  font-semibold font-sans items-center gap-1">
                 Week 1 of 14
               </p>
             </div>
@@ -67,7 +67,7 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
                 />
                 <h1 className="">Last Active</h1>
               </div>
-              <p className="bg-emerald-300/65  px-3 py-0.5 inline-flex font-semibold items-center gap-1">
+              <p className="bg-emerald-300/65  px-3 py-0.5 inline-flex  font-semibold font-sans items-center gap-1">
                 14 hours ago
               </p>
             </div>
@@ -149,8 +149,8 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
               <div className="inline-flex items-center gap-2">
                 <p className=" font-semibold">78 kg</p>
                 <p className="bg-red-500/55 px-2 text-sm py-1 inline-flex font-semibold items-center gap-1">
-                  <IoChevronDownOutline className="text-black mr-1 " />
-                  5%
+                  <IoChevronDownOutline className="text-black mr-1 " />5
+                  <span className=" font-sans">%</span>
                 </p>
               </div>
             </div>
@@ -159,10 +159,12 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
                 <h1 className="">body Fat</h1>
               </div>
               <div className="inline-flex items-center gap-2">
-                <p className=" font-semibold">0 %</p>
+                <p className=" font-semibold">
+                  0 <span className=" font-sans">%</span>
+                </p>
                 <p className="bg-slate-300/55 px-2 text-sm py-1 inline-flex font-semibold items-center gap-1">
-                  <span className="mr-2">-</span>
-                  0%
+                  <span className="mr-2">-</span>0
+                  <span className=" font-sans">%</span>
                 </p>
               </div>
             </div>
@@ -173,8 +175,8 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
               <div className="inline-flex items-center gap-2">
                 <p className=" font-semibold">9349 steps</p>
                 <p className="bg-red-500/55 px-2 text-sm py-1 inline-flex font-semibold items-center gap-1">
-                  <IoChevronDownOutline className="text-black mr-1 " />
-                  7%
+                  <IoChevronDownOutline className="text-black mr-1 " />7
+                  <span className=" font-sans">%</span>
                 </p>
               </div>
             </div>
@@ -185,8 +187,8 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
               <div className="inline-flex items-center gap-2">
                 <p className=" font-semibold">640 calories</p>
                 <p className="bg-red-500/55 px-2 text-sm py-1 inline-flex font-semibold items-center gap-1">
-                  <IoChevronDownOutline className="text-black mr-1 " />
-                  5%
+                  <IoChevronDownOutline className="text-black mr-1 " />5
+                  <span className=" font-sans">%</span>
                 </p>
               </div>
             </div>

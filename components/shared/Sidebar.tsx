@@ -5,6 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 const Sidebar = () => {
   const pathname = usePathname();
+  console.log(pathname);
+  const { startsWith } = usePathname();
   return (
     <>
       <div className=" bg-white h-full w-[17%] min-h-svh hidden lg:flex gap-10 flex-col px-8 py-12">
@@ -42,7 +44,9 @@ const Sidebar = () => {
               width={22}
               height={22}
               className={`${
-                pathname === "/client" ? "opacity-100" : "opacity-30"
+                pathname === "/client" || startsWith === "/clients"
+                  ? "opacity-100"
+                  : "opacity-30"
               }`}
               priority
             />

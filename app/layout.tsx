@@ -4,23 +4,15 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
 import NextTopLoader from "nextjs-toploader";
+import localFont from "next/font/local";
 
-const oxanium = Oxanium({
-  subsets: ["latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-oxanium",
-});
-const poppins = Poppins({
-  subsets: ["latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-oxanium",
-});
+const recoleta = localFont({ src: "./recoleta.ttf" });
 
-const averia = Averia_Serif_Libre({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-averia",
-});
+// const averia = Averia_Serif_Libre({
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+//   variable: "--font-averia",
+// });
 
 export const metadata: Metadata = {
   title: "Fitness Dashboard",
@@ -34,14 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={averia.variable}>
+      <body className={recoleta.className}>
         <NextTopLoader
           color="pink"
           initialPosition={0.08}
           crawlSpeed={200}
           height={2}
+          showSpinner={false}
           crawl={true}
-          // showSpinner={true}
           easing="ease"
           speed={200}
           shadow="0 0 5px #2299DD,0 0 5px #2299DD"
@@ -59,7 +51,6 @@ export default function RootLayout({
           <Sidebar />
           <section className=" w-full">{children}</section>
         </main>
-        {/* <Toaster position="top-center" /> */}
       </body>
     </html>
   );

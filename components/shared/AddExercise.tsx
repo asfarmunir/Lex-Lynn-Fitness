@@ -78,7 +78,7 @@ const AddClient = () => {
     <AlertDialog>
       <AlertDialogTrigger className=" flex text-white p-2 text-sm lg:text-base text-nowrap   gap-2 items-center justify-start bg-primary-50 ">
         <IoMdAdd className="text-base lg:text-xl" />
-        Add New Client
+        Add Exercise
       </AlertDialogTrigger>
       <AlertDialogContent className=" p-0 pb-6 xl:min-w-[800px] ">
         <AlertDialogHeader>
